@@ -1,0 +1,561 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Релизы</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="HandheldFriendly" content="true"/>
+
+    
+    
+
+    <script type="text/javascript">
+        var dzs = window.location.hostname.split('.');
+        var isEu = dzs[dzs.length - 1] === 'eu';
+        var dzSuffix = isEu ? '-eu' : '';
+        var iconLink = document.createElement('link');
+        var appleIconLink = document.createElement('link');
+        iconLink.rel = 'icon';
+        iconLink.href = /resources/ + 'resources/img/favicon' + dzSuffix + '.ico';
+        appleIconLink.rel = 'apple-touch-icon';
+        appleIconLink.href = /resources/ + 'resources/img/logo192' + dzSuffix + '.png';
+        document.head.appendChild(iconLink);
+        document.head.appendChild(appleIconLink);
+    </script>
+
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/css/normalize.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/css/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/css/style.css?v=32">
+    <link rel="stylesheet" type="text/css" media="print"
+          href="/resources/resources/css/print.css?v=32">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/css/responsive-custom.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/select2/css/select2.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/css/localization.css">
+
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.i18n.properties-min-1.0.9.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.numeric.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/select2/js/select2.full.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/i18n/i18next-1.9.0.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/localization.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/select2/js/i18n/ru.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/jquery-validation-1.11.1/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.ddslick.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/bootstrap/js/bootbox.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jsRender.min.js"></script>
+    <script type="text/javascript" src="/resources/resources/js/underscore.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.cookie.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/qtip2/imagesloaded.pkg.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/common.js?v=32"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/projects.js?v=32"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/news.js?v=32"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/version-files.js?v=32"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript" src="/resources/resources/noty/jquery.noty.packaged.min.js?v=2.2.10"></script>
+
+    <script type="text/javascript" src="/resources/resources/js/stomp.min.js"></script>
+
+    <script type="text/javascript" src="/resources/resources/js/sockjs.min.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src=" /resources//resources/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.html5-placeholder-shim.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src=" /resources//resources/js/respond.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        init.head({showLeftMenu: false, baseUrl: '/resources/'},
+                {baseUrl: '/'});
+
+        bootbox.setLocale('ru');
+        bootbox.setBtnClasses({
+            CANCEL: 'btn-danger',
+            CONFIRM: 'btn-success',
+            OK: 'btn-success'
+        });
+
+        init.initLocalization(false);
+        init.addMissedMethods();
+
+    </script>
+</head>
+
+<body>
+<table class="common-container">
+    <tbody>
+    <tr class="header-container">
+        <td>
+            <div class="navbar">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="header">
+    <!-- Settings toolbar contains location and language components and so on -->
+    <div class="settings-toolbar">
+        
+
+
+<li id="countryDropdown" class="dropdown">
+    <a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="javascript:void(0);">
+        <div class="countryFlagImg"></div>
+        <span class="textValue"></span>
+        <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu localizationDropDownMenu">
+
+    </ul>
+</li>
+<li id="localeDropdown" class="dropdown">
+    <a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="javascript:void(0);">
+        <span class="textValue"></span>
+        <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu localizationDropDownMenu">
+
+    </ul>
+</li>
+<script type="application/javascript">
+    localization.initLocalization();
+</script>
+
+        
+            <script type="text/javascript">
+                const li = document.getElementById('countryDropdown')
+                    .getElementsByTagName('ul').item(0)
+                    .getElementsByTagName('li');
+
+                for (let i = 0; i < li.length; i++) {
+                    if (li[i].getAttribute("data-value") === 'UA') {
+                        li[i].remove();
+                        break;
+                    }
+                }
+            </script>
+        
+
+        <span class="portal-name">
+                <a href="https://portal.1c.ru">
+                    
+                        Портал 1С:ИТС
+                    
+                    
+                </a>
+            </span>
+        
+            
+            
+            <span class="exit-btn">
+                    <span class="exit-btn-icon"><img
+                            src="/resources/resources/img/exit-btn-icon.png"/></span>
+                    <a href=" /exit">
+                        Выход
+                    </a>
+                </span>
+            <span class="login">
+                    <span class="login-icon"><img
+                            src="/resources/resources/img/login-icon.png"/></span>
+                    <a href="https://login.1c.ru/user/profile">
+                        <nobr>dev1c&#64;hqss&#46;kz</nobr>
+                    </a>
+                </span>
+        
+        
+    </div>
+
+    <!-- Service toolbar contains service name and menu toolbar-->
+    <div class="service-toolbar">
+        <div class="service-icon">
+            <span><img src="/resources/resources/img/releases-service-icon.png"/></span>
+        </div>
+        <div class="service-info">
+            <div class="service-name">
+                <span>
+                
+                    <a href="https://portal.1c.ru/applications/4">
+                        1C:Обновление программ
+                    </a>
+                
+                
+                </span>
+            </div>
+            <div class="menu-toolbar">
+                <span class="menu-main-page">
+                    <img src="/resources/resources/img/main-icon.svg"/>
+                    <a href="/">
+                        Главная
+                    </a>
+                </span>
+                <span class="menu-news-page">
+                        <img src="/resources/resources/img/news-icon.svg"/>
+                        <a href="/news">
+                            Новости
+                        </a>
+                </span>
+
+                
+                    <span class="menu-classifiers-page">
+                        <span style="vertical-align:middle"><i class="fa fa-th-list" aria-hidden="false"></i></span>
+                        <a href="/classifiers/total">
+                            Классификаторы
+                        </a>
+                    </span>
+                    <span class="menu-external-component-page">
+                        <img src="/resources/resources/img/external_components.svg"/>
+                        <a href="/external-components/total">
+                            Внешние компоненты
+                        </a>
+                    </span>
+                
+                <span class="menu-patches-page">
+                        <img src="/resources/resources/img/search-icon.svg"/>
+                        <a href="/patches/search">
+                            Поиск исправлений
+                        </a>
+                </span>
+                <span class="menu-profile-page">
+                        <img src="/resources/resources/img/profile-icon.svg"/>
+                        <a href="https://portal.1c.ru/software">
+                            Личный кабинет
+                        </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </td>
+    </tr>
+    <tr class="body-container">
+        <td style="vertical-align: top">
+            <div class="body-content">
+                
+
+
+
+
+
+
+
+
+
+
+<script type="application/javascript">
+
+    function refreshDownloadButtonStatus() {
+        if (
+            $(".download-flag:checked").size() < 1
+        ) {
+            $(".download-button").attr('disabled', 'disabled');
+        } else {
+            $(".download-button").removeAttr('disabled');
+        }
+    }
+
+    $(document).ready(function () {
+        $.views.converters("date", function (millis) {
+                var d = new Date(millis);
+                return ("0" + d.getDate()).slice(-2) + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + d.getFullYear();
+            }
+        );
+        $(".download-button").click(function (e) {
+            e.preventDefault();
+            window.location.href = $(this).data('url')+"?keys=" +
+                $(".download-flag:checked").map(function () {
+                    return $(this).val();
+                }).get().join(',')
+        });
+
+        $(".download-flag").click(function () {
+            refreshDownloadButtonStatus();
+        });
+
+
+        $("#download-all-flag").click(function () {
+            $('.download-flag').prop('checked', $(this).prop("checked"));
+            refreshDownloadButtonStatus();
+        });
+
+    })
+
+</script>
+<div class="classifiers-list-container">
+    <div>
+        <h3>Исправления ошибок версии</h3>
+    </div>
+    <div class="formLine">
+        Следующие исправления (патчи) можно установить в версию 3.0.62.1 программы Бухгалтерия для Казахстана
+    </div>
+
+    <div class="formLine">
+        
+            
+                
+                    <button type="button" class="download-button" data-url="https://dl04.1c.ru/public/sso/patches/download" disabled="disabled" style="margin-right: 30px;">
+                        Скачать
+                    </button>
+                
+                
+            
+        
+            
+                
+                
+                    
+                    
+                        <button type="button" class="download-button" data-url="https://dl05.1c.ru/public/sso/patches/download" disabled="disabled">
+                            Скачать с зеркала 1
+                        </button>
+                    
+                
+            
+        
+            
+                
+                
+                    
+                    
+                        <button type="button" class="download-button" data-url="https://dl03.1c.ru/public/sso/patches/download" disabled="disabled">
+                            Скачать с зеркала 2
+                        </button>
+                    
+                
+            
+        
+    </div>
+
+    <div class="formLine">
+        <table id="versionsTable" class="customTable">
+            <thead>
+            <tr>
+                <th id="patches-download-flag-header">
+                    <input type="checkbox" id="download-all-flag" }/></th>
+                <th class="nameHead">Название исправления</th>
+                <th>Описание</th>
+                <th class="dateColumn">Дата исправления</th>
+            </tr>
+            </thead>
+            <tbody id="patches-list-table-body">
+            
+                <tr>
+                    <td>
+                        
+                            <input type="checkbox" class ="download-flag" value="efd452ff-ce2b-44b3-8d08-de78b53870c5"}/>
+                        
+                    </td>
+                    <td class ="nameColumn with-file-info-tooltip">
+                        EF_00_00029643
+                                
+                        <img src="/resources/resources/img/file-info.svg"
+                             class="file-info-tooltip" data-toggle="tooltip" data-placement="top"
+                             title="Информация о файле"
+                             onclick="window.fileInfoModal.open(this, `/files/properties/patches/efd452ff-ce2b-44b3-8d08-de78b53870c5`)"
+                        />
+                    </td>
+                    <td>
+
+                        <!--Описание патча-->
+                        
+                        
+                                
+                                
+                                     <pre class="descriptionColumn">Исправлена ошибка при формировании печатной формы &#034;Расчет среднего заработка&#034;, когда в табличной части &#034;Средний заработок&#034; присутствует строка с премией, в которой указан неполный период (например, 20
+...</pre>
+                                     <a href="#patchDescription-efd452ff-ce2b-44b3-8d08-de78b53870c5" role="button" data-toggle="modal">
+                                            Подробнее</a>
+                                     <!-- Modal -->
+                                     <div id="patchDescription-efd452ff-ce2b-44b3-8d08-de78b53870c5" style="width: 1000px;
+                                      position: fixed; margin-left: auto; margin-right: auto; left: 0; right: 0;"
+                                          class="modal hide fade"
+                                                      tabindex="-1" role="dialog" aria-hidden="true">
+                                         <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                             <h5>Описание</h5>
+                                         </div>
+                                         <div class="modal-body" style="min-height: 700px;">
+                                             <pre class="descriptionColumn">Исправлена ошибка при формировании печатной формы &#034;Расчет среднего заработка&#034;, когда в табличной части &#034;Средний заработок&#034; присутствует строка с премией, в которой указан неполный период (например, 20.06.2024-30.06.2024, а не 01.06.2024-30.06.2024)</pre>
+                                         </div>
+                                     </div>
+                                
+                        
+                        
+
+                    </td>
+                    <td class="dateColumn">09.01.2025</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            <input type="checkbox" class ="download-flag" value="a7517f56-86b0-42cf-acc2-15b36a594ee9"}/>
+                        
+                    </td>
+                    <td class ="nameColumn with-file-info-tooltip">
+                        EF_00_00029627
+                                
+                        <img src="/resources/resources/img/file-info.svg"
+                             class="file-info-tooltip" data-toggle="tooltip" data-placement="top"
+                             title="Информация о файле"
+                             onclick="window.fileInfoModal.open(this, `/files/properties/patches/a7517f56-86b0-42cf-acc2-15b36a594ee9`)"
+                        />
+                    </td>
+                    <td>
+
+                        <!--Описание патча-->
+                        
+                        
+                                
+                                
+                                     <pre class="descriptionColumn">Исправлена ошибка &#034;Ключ не принадлежит указанному БИН&#034;, возникавшая при использовании средств криптографии NCALayer при работе с ключом юридического лица. Версия внешней компоненты для работы со средс
+...</pre>
+                                     <a href="#patchDescription-a7517f56-86b0-42cf-acc2-15b36a594ee9" role="button" data-toggle="modal">
+                                            Подробнее</a>
+                                     <!-- Modal -->
+                                     <div id="patchDescription-a7517f56-86b0-42cf-acc2-15b36a594ee9" style="width: 1000px;
+                                      position: fixed; margin-left: auto; margin-right: auto; left: 0; right: 0;"
+                                          class="modal hide fade"
+                                                      tabindex="-1" role="dialog" aria-hidden="true">
+                                         <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                             <h5>Описание</h5>
+                                         </div>
+                                         <div class="modal-body" style="min-height: 700px;">
+                                             <pre class="descriptionColumn">Исправлена ошибка &#034;Ключ не принадлежит указанному БИН&#034;, возникавшая при использовании средств криптографии NCALayer при работе с ключом юридического лица. Версия внешней компоненты для работы со средствами криптографии НУЦ РК обновлена до версии 5.42.</pre>
+                                         </div>
+                                     </div>
+                                
+                        
+                        
+
+                    </td>
+                    <td class="dateColumn">31.12.2024</td>
+                </tr>
+            
+            </tbody>
+        </table>
+    </div>
+    <div class="formLine">
+        <a href="http://downloads.v8.1c.ru/content/Instruction/patch-installation.pdf">
+            Как установить исправление (патч) в информационную базу
+        </a>
+    </div>
+</div>
+            </div>
+        </td>
+    </tr>
+    <tr class="footer-container">
+        <td>
+            <footer class="footer">
+                
+
+
+
+
+
+
+
+
+<div class="innerFooter">
+    <div class="footerInfo">
+        <span>
+            
+            
+                &copy; 1С-Софт, 2025. Все права защищены
+            
+        </span>
+    </div>
+</div>
+            </footer>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+
+    <script type="text/javascript"
+    src="/resources/resources/ga.js"></script>
+
+

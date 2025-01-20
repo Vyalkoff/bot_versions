@@ -1,0 +1,2521 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Релизы</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="HandheldFriendly" content="true"/>
+
+    
+    
+
+    <script type="text/javascript">
+        var dzs = window.location.hostname.split('.');
+        var isEu = dzs[dzs.length - 1] === 'eu';
+        var dzSuffix = isEu ? '-eu' : '';
+        var iconLink = document.createElement('link');
+        var appleIconLink = document.createElement('link');
+        iconLink.rel = 'icon';
+        iconLink.href = /resources/ + 'resources/img/favicon' + dzSuffix + '.ico';
+        appleIconLink.rel = 'apple-touch-icon';
+        appleIconLink.href = /resources/ + 'resources/img/logo192' + dzSuffix + '.png';
+        document.head.appendChild(iconLink);
+        document.head.appendChild(appleIconLink);
+    </script>
+
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/css/normalize.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/css/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/css/style.css?v=32">
+    <link rel="stylesheet" type="text/css" media="print"
+          href="/resources/resources/css/print.css?v=32">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/css/responsive-custom.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/select2/css/select2.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="/resources/resources/css/localization.css">
+
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.i18n.properties-min-1.0.9.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.numeric.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/select2/js/select2.full.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/i18n/i18next-1.9.0.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/localization.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/select2/js/i18n/ru.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/jquery-validation-1.11.1/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.ddslick.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/bootstrap/js/bootbox.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jsRender.min.js"></script>
+    <script type="text/javascript" src="/resources/resources/js/underscore.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.cookie.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/qtip2/imagesloaded.pkg.min.js"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/common.js?v=32"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/projects.js?v=32"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/news.js?v=32"></script>
+    <script type="text/javascript"
+            src="/resources/resources/js/version-files.js?v=32"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript" src="/resources/resources/noty/jquery.noty.packaged.min.js?v=2.2.10"></script>
+
+    <script type="text/javascript" src="/resources/resources/js/stomp.min.js"></script>
+
+    <script type="text/javascript" src="/resources/resources/js/sockjs.min.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src=" /resources//resources/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript"
+            src="/resources/resources/js/jquery.html5-placeholder-shim.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src=" /resources//resources/js/respond.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        init.head({showLeftMenu: false, baseUrl: '/resources/'},
+                {baseUrl: '/'});
+
+        bootbox.setLocale('ru');
+        bootbox.setBtnClasses({
+            CANCEL: 'btn-danger',
+            CONFIRM: 'btn-success',
+            OK: 'btn-success'
+        });
+
+        init.initLocalization(false);
+        init.addMissedMethods();
+
+    </script>
+</head>
+
+<body>
+<table class="common-container">
+    <tbody>
+    <tr class="header-container">
+        <td>
+            <div class="navbar">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="header">
+    <!-- Settings toolbar contains location and language components and so on -->
+    <div class="settings-toolbar">
+        
+
+
+<li id="countryDropdown" class="dropdown">
+    <a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="javascript:void(0);">
+        <div class="countryFlagImg"></div>
+        <span class="textValue"></span>
+        <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu localizationDropDownMenu">
+
+    </ul>
+</li>
+<li id="localeDropdown" class="dropdown">
+    <a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="javascript:void(0);">
+        <span class="textValue"></span>
+        <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu localizationDropDownMenu">
+
+    </ul>
+</li>
+<script type="application/javascript">
+    localization.initLocalization();
+</script>
+
+        
+            <script type="text/javascript">
+                const li = document.getElementById('countryDropdown')
+                    .getElementsByTagName('ul').item(0)
+                    .getElementsByTagName('li');
+
+                for (let i = 0; i < li.length; i++) {
+                    if (li[i].getAttribute("data-value") === 'UA') {
+                        li[i].remove();
+                        break;
+                    }
+                }
+            </script>
+        
+
+        <span class="portal-name">
+                <a href="https://portal.1c.ru">
+                    
+                        Портал 1С:ИТС
+                    
+                    
+                </a>
+            </span>
+        
+            
+            
+            <span class="exit-btn">
+                    <span class="exit-btn-icon"><img
+                            src="/resources/resources/img/exit-btn-icon.png"/></span>
+                    <a href=" /exit">
+                        Выход
+                    </a>
+                </span>
+            <span class="login">
+                    <span class="login-icon"><img
+                            src="/resources/resources/img/login-icon.png"/></span>
+                    <a href="https://login.1c.ru/user/profile">
+                        <nobr>dev1c&#64;hqss&#46;kz</nobr>
+                    </a>
+                </span>
+        
+        
+    </div>
+
+    <!-- Service toolbar contains service name and menu toolbar-->
+    <div class="service-toolbar">
+        <div class="service-icon">
+            <span><img src="/resources/resources/img/releases-service-icon.png"/></span>
+        </div>
+        <div class="service-info">
+            <div class="service-name">
+                <span>
+                
+                    <a href="https://portal.1c.ru/applications/4">
+                        1C:Обновление программ
+                    </a>
+                
+                
+                </span>
+            </div>
+            <div class="menu-toolbar">
+                <span class="menu-main-page">
+                    <img src="/resources/resources/img/main-icon.svg"/>
+                    <a href="/">
+                        Главная
+                    </a>
+                </span>
+                <span class="menu-news-page">
+                        <img src="/resources/resources/img/news-icon.svg"/>
+                        <a href="/news">
+                            Новости
+                        </a>
+                </span>
+
+                
+                    <span class="menu-classifiers-page">
+                        <span style="vertical-align:middle"><i class="fa fa-th-list" aria-hidden="false"></i></span>
+                        <a href="/classifiers/total">
+                            Классификаторы
+                        </a>
+                    </span>
+                    <span class="menu-external-component-page">
+                        <img src="/resources/resources/img/external_components.svg"/>
+                        <a href="/external-components/total">
+                            Внешние компоненты
+                        </a>
+                    </span>
+                
+                <span class="menu-patches-page">
+                        <img src="/resources/resources/img/search-icon.svg"/>
+                        <a href="/patches/search">
+                            Поиск исправлений
+                        </a>
+                </span>
+                <span class="menu-profile-page">
+                        <img src="/resources/resources/img/profile-icon.svg"/>
+                        <a href="https://portal.1c.ru/software">
+                            Личный кабинет
+                        </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </td>
+    </tr>
+    <tr class="body-container">
+        <td style="vertical-align: top">
+            <div class="body-content">
+                
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.customTable').each(function (index, value) {
+            $value = $(value);
+            tables.init($value);
+            tables.addLinker($value);
+        });
+    });
+</script>
+
+<div class="projects-container">
+    <div>
+        <span class="project-name">Бухгалтерия для Казахстана, редакция 3.0</span>
+    </div>
+
+    
+        
+        
+            
+                <a class="program-info-url" href="http://www.1c.ru/news/info.jsp?id=4914">
+                    Общая информация о конфигурации
+                </a>
+            
+
+            <div class="formLine">
+                    <p><span style='font-size: 12pt; font-weight: bold;'>Новое в редакции</span></p>
+<p>Конфигурация &quot;Бухгалтерия для Казахстана, редакция 3.0&quot; разработана на основе конфигурации &quot;Бухгалтерия для Казахстана, редакция 2.0&quot;. В редакции 3.0 обеспечивается преемственность методологии ведения бухгалтерского учета редакции 2.0.</p>
+<p>Основным направлением развития в новой редакции конфигурации &quot;Бухгалтерия для Казахстана&quot; является использование возможностей, предоставляемых платформой версии 8.3:</p>
+<ul>
+<li>Работа в режиме управляемого приложения,</li>
+<li>Поддержка тонкого и веб-клиента,</li>
+<li>Новые возможности управления интерфейсом программы и отдельных форм,</li>
+<li>Перенос основной &quot;вычислительной&quot; нагрузки на сервер и экономное использование ресурсов клиента.</li>
+</ul>
+<p>Совместимость с предыдущими версиями</p>
+<p>Переход на новую версию редакции 3.0 осуществляется обновлением информационной базы редакции 2.0 &quot;Бухгалтерии для Казахстана&quot;. Данные информационной базы редакции 2.0 при этом сохраняются.</p>
+<p>Стандартные бухгалтерские отчеты</p>
+<p>Конфигурация предоставляет пользователю набор стандартных отчетов, которые позволяют анализировать данные по остаткам, оборотам счетов и по проводкам в самых различных разрезах. При формировании отчетов есть возможность настройки группировки, отбора и сортировки информации, выводимой в отчет, исходя из специфики деятельности организации и выполняемых пользователем функций.</p>
+<p><span style='font-size: 12pt; font-weight: bold;'>Режим работы</span></p>
+<p>Рекомендуемые режимы работы: </p>
+<ul>
+<li>Тонкий клиент</li>
+</ul>
+<p><br></p>
+            </div>
+
+            <a name="updates"></a>
+            
+                <div class="formLine projectPageTitle">
+                    <h5>
+                        Обновления
+                    </h5>
+                </div>
+                <div class="formLine">
+                    <table id="versionsTable" class="customTable">
+                        <thead>
+                        <tr>
+                            <th class="versionColumn">
+                                Номер версии
+                            </th>
+                            <th class="dateColumn">
+                                Дата выхода
+                            </th>
+                            <th class="previousVersionsColumn">
+                                Обновление версии
+                            </th>
+                            
+                                <th class="minVersionsColumn">
+                                    Минимальная версия платформы
+                                </th>
+                            
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.62.1">
+                                        3.0.62.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                30.12.24
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.61.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.22.1923
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.61.1">
+                                        3.0.61.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                02.12.24
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.60.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.22.1923
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.60.1">
+                                        3.0.60.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                08.10.24
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.59.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.22.1923
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.59.1">
+                                        3.0.59.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                16.08.24
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.58.1, 3.0.58.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.22.1923
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.58.2">
+                                        3.0.58.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                17.07.24
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.57.1, 3.0.58.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.22.1923
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.58.1">
+                                        3.0.58.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                27.06.24
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.57.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.22.1923
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.57.1">
+                                        3.0.57.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                31.05.24
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.56.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.22.1923
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.56.1">
+                                        3.0.56.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                03.05.24
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.55.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.22.1923
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.55.1">
+                                        3.0.55.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                13.03.24
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.54.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.22.1923
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.54.1">
+                                        3.0.54.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                02.02.24
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.53.1, 3.0.53.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.18.1741
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.53.2">
+                                        3.0.53.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                28.12.23
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.52.1, 3.0.52.3, 3.0.53.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.18.1741
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.53.1">
+                                        3.0.53.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                12.12.23
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.52.1, 3.0.52.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.18.1741
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.52.3">
+                                        3.0.52.3
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                24.11.23
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.51.1, 3.0.52.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.18.1741
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.52.1">
+                                        3.0.52.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                08.11.23
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.51.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.18.1741
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.51.1">
+                                        3.0.51.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                29.09.23
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.37.1, 3.0.50.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.19.1467
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.50.1">
+                                        3.0.50.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                29.08.23
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.49.1, 3.0.49.2, 2.0.37.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.19.1467
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.49.2">
+                                        3.0.49.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                04.08.23
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.36.1, 2.0.36.3, 3.0.48.1, 3.0.49.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.19.1467
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.49.1">
+                                        3.0.49.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                20.06.23
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.36.1, 2.0.36.3, 3.0.48.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.19.1467
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.48.1">
+                                        3.0.48.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                16.05.23
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.36.1, 2.0.36.3, 3.0.47.1, 3.0.47.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.19.1467
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.47.2">
+                                        3.0.47.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                13.04.23
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.36.1, 3.0.46.1, 2.0.36.3, 3.0.47.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.19.1467
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.47.1">
+                                        3.0.47.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                22.02.23
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.36.1, 3.0.46.1, 2.0.36.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.19.1467
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.46.1">
+                                        3.0.46.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                30.12.22
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.36.1, 3.0.45.1, 3.0.45.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.18.1741
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.45.2">
+                                        3.0.45.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                05.12.22
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.36.1, 3.0.44.1, 3.0.45.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.18.1741
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.45.1">
+                                        3.0.45.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                01.11.22
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.36.1, 3.0.44.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.18.1741
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.44.1">
+                                        3.0.44.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                27.09.22
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.43.1, 2.0.36.1, 3.0.43.2, 3.0.43.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.43.3">
+                                        3.0.43.3
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                10.08.22
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.42.1, 3.0.43.1, 2.0.36.1, 3.0.43.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.43.2">
+                                        3.0.43.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                07.07.22
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.42.1, 3.0.43.1, 2.0.36.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.43.1">
+                                        3.0.43.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                08.06.22
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.35.2, 3.0.41.3, 3.0.42.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.42.1">
+                                        3.0.42.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                18.05.22
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.35.2, 3.0.41.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.41.3">
+                                        3.0.41.3
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                14.03.22
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.40.2, 3.0.41.1, 3.0.41.2, 2.0.35.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.41.2">
+                                        3.0.41.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                29.12.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.34.3, 3.0.40.2, 3.0.41.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.41.1">
+                                        3.0.41.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                15.12.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.34.3, 3.0.40.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.40.2">
+                                        3.0.40.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                17.09.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.34.1, 3.0.39.1, 3.0.39.2, 3.0.39.3, 3.0.39.4, 2.0.34.2, 3.0.39.5, 3.0.39.7, 2.0.34.3, 3.0.39.8, 3.0.40.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.40.1">
+                                        3.0.40.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                24.06.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.34.1, 3.0.39.1, 3.0.39.2, 3.0.39.3, 3.0.39.4, 2.0.34.2, 3.0.39.5, 3.0.39.7, 2.0.34.3, 3.0.39.8
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.39.8">
+                                        3.0.39.8
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                27.05.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.34.1, 3.0.39.1, 3.0.39.2, 3.0.39.3, 3.0.39.4, 2.0.34.2, 3.0.39.5, 3.0.39.7, 2.0.34.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.39.7">
+                                        3.0.39.7
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                21.04.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.34.1, 3.0.39.1, 3.0.39.2, 3.0.39.3, 3.0.39.4, 2.0.34.2, 3.0.39.5
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.39.5">
+                                        3.0.39.5
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                09.04.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.34.1, 3.0.39.1, 3.0.39.2, 3.0.39.3, 3.0.39.4, 2.0.34.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.39.4">
+                                        3.0.39.4
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                23.03.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.34.1, 3.0.39.1, 3.0.39.2, 3.0.39.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.39.3">
+                                        3.0.39.3
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                09.03.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.34.1, 3.0.39.1, 3.0.39.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.39.2">
+                                        3.0.39.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                10.02.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.34.1, 3.0.39.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.39.1">
+                                        3.0.39.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                28.01.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.38.1, 2.0.34.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.38.1">
+                                        3.0.38.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                01.01.21
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.33.2, 3.0.37.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.37.1">
+                                        3.0.37.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                15.12.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.33.2, 3.0.35.10
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.35.10">
+                                        3.0.35.10
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                02.12.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.33.2, 3.0.33.7, 3.0.35.3, 3.0.35.4, 3.0.35.5, 3.0.35.6, 3.0.35.7, 3.0.35.8, 3.0.35.9
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.35.9">
+                                        3.0.35.9
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                12.11.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.33.2, 3.0.33.7, 3.0.35.3, 3.0.35.4, 3.0.35.5, 3.0.35.6, 3.0.35.7, 3.0.35.8
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.35.8">
+                                        3.0.35.8
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                19.10.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.33.2, 3.0.33.7, 3.0.35.3, 3.0.35.4, 3.0.35.5, 3.0.35.6, 3.0.35.7
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.35.7">
+                                        3.0.35.7
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                13.10.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.33.2, 3.0.33.7, 3.0.35.3, 3.0.35.4, 3.0.35.5, 3.0.35.6
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.35.6">
+                                        3.0.35.6
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                08.09.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.33.2, 3.0.33.3, 3.0.33.4, 3.0.33.5, 3.0.33.6, 2.0.33.2, 3.0.33.7, 3.0.35.3, 3.0.35.4, 3.0.35.5
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.35.5">
+                                        3.0.35.5
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                10.08.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.33.2, 3.0.33.3, 3.0.33.4, 3.0.33.5, 3.0.33.6, 2.0.33.2, 3.0.33.7, 3.0.35.3, 3.0.35.4
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.35.4">
+                                        3.0.35.4
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                01.07.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.33.2, 3.0.33.3, 3.0.33.4, 3.0.33.5, 3.0.33.6, 2.0.33.2, 3.0.33.7, 3.0.35.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.35.3">
+                                        3.0.35.3
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                16.06.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.33.2, 3.0.33.3, 3.0.33.4, 3.0.33.5, 3.0.33.6, 2.0.33.2, 3.0.33.7
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.15.1830
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.33.7">
+                                        3.0.33.7
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                26.05.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.32.1, 3.0.33.2, 3.0.33.3, 3.0.33.4, 3.0.33.5, 3.0.33.6, 2.0.33.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.33.6">
+                                        3.0.33.6
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                30.04.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.32.1, 3.0.33.2, 3.0.33.3, 3.0.33.4, 3.0.33.5, 2.0.33.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.33.5">
+                                        3.0.33.5
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                08.04.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.32.1, 3.0.33.2, 2.0.32.1, 3.0.33.3, 3.0.33.4
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.33.4">
+                                        3.0.33.4
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                17.02.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.32.1, 3.0.33.2, 2.0.32.1, 3.0.33.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.33.3">
+                                        3.0.33.3
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                04.02.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.32.1, 3.0.33.2, 2.0.32.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.33.2">
+                                        3.0.33.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                09.01.20
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.31.2, 3.0.32.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.32.1">
+                                        3.0.32.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                03.10.19
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.31.2, 3.0.31.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.31.2">
+                                        3.0.31.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                29.08.19
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.30.1, 2.0.31.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.30.1">
+                                        3.0.30.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                24.07.19
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.29.1, 2.0.30.1, 2.0.30.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.29.1">
+                                        3.0.29.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                13.06.19
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.29.2, 2.0.29.3, 3.0.28.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.28.2">
+                                        3.0.28.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                21.05.19
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.29.2, 2.0.29.3, 3.0.26.1, 3.0.27.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.27.3">
+                                        3.0.27.3
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                30.04.19
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.29.2, 2.0.29.3, 3.0.26.1
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.26.1">
+                                        3.0.26.1
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                21.03.19
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.25.2, 2.0.29.2, 2.0.29.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.25.2">
+                                        3.0.25.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                28.01.19
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.27.2, 3.0.24.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.24.2">
+                                        3.0.24.2
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                27.12.18
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.27.2, 3.0.23.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.23.3">
+                                        3.0.23.3
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                31.10.18
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.27.2, 3.0.22.4
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.22.4">
+                                        3.0.22.4
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                29.08.18
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.27.2, 3.0.21.7, 3.0.21.9
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.11.3133
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.21.9">
+                                        3.0.21.9
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                27.07.18
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.20.4, 2.0.27.2, 3.0.21.7
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.21.7">
+                                        3.0.21.7
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                13.07.18
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.20.4, 2.0.27.2
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.20.4">
+                                        3.0.20.4
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                23.05.18
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.26.9, 2.0.26.11, 3.0.19.3, 2.0.26.12
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.19.3">
+                                        3.0.19.3
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                23.02.18
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.18.11, 2.0.26.9, 3.0.18.12, 2.0.26.11
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.18.12">
+                                        3.0.18.12
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                31.01.18
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.25.15, 3.0.17.11, 3.0.18.11, 2.0.26.9
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.18.11">
+                                        3.0.18.11
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                10.01.18
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.25.10, 2.0.25.15, 3.0.17.11
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.17.11">
+                                        3.0.17.11
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                05.12.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.25.10, 3.0.16.10, 3.0.16.15, 2.0.25.15
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.16.15">
+                                        3.0.16.15
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                14.11.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.15.21, 2.0.25.10, 3.0.15.28, 3.0.16.10
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.16.10">
+                                        3.0.16.10
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                31.10.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.15.21, 2.0.25.10, 3.0.15.28
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.15.28">
+                                        3.0.15.28
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                02.10.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.14.20, 3.0.14.25, 3.0.15.21, 2.0.25.10
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.15.21">
+                                        3.0.15.21
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                19.09.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.14.20, 3.0.14.25, 2.0.24.10
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.14.25">
+                                        3.0.14.25
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                03.08.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.13.18, 3.0.13.20, 3.0.13.26, 2.0.23.18, 3.0.14.20, 2.0.24.7
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.14.20">
+                                        3.0.14.20
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                19.07.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.13.18, 3.0.13.20, 3.0.13.26, 2.0.23.18
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.13.26">
+                                        3.0.13.26
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                29.05.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.23.13, 3.0.12.14, 3.0.12.16, 3.0.13.18, 3.0.13.20
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.13.20">
+                                        3.0.13.20
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                12.05.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.23.13, 3.0.12.14, 3.0.12.16, 3.0.13.18
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.13.18">
+                                        3.0.13.18
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                28.04.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.23.13, 3.0.12.14, 3.0.12.16
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.8.2197
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.12.16">
+                                        3.0.12.16
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                14.03.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.11.10, 2.0.23.13, 3.0.11.11, 3.0.11.12, 3.0.12.14
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.7.1845
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.12.14">
+                                        3.0.12.14
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                28.02.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.11.10, 2.0.23.12, 2.0.23.13, 3.0.11.11, 3.0.11.12
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.7.1845
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.11.12">
+                                        3.0.11.12
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                02.02.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.10.20, 3.0.11.10, 2.0.23.12, 2.0.23.13, 3.0.11.11
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.7.1845
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.11.11">
+                                        3.0.11.11
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                16.01.17
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.9.35, 3.0.10.20, 3.0.11.10, 2.0.23.12, 2.0.23.13
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.7.1845
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.11.10">
+                                        3.0.11.10
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                28.12.16
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.22.20, 3.0.9.35, 3.0.10.20
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.7.1845
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.10.20">
+                                        3.0.10.20
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                09.12.16
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.9.11, 3.0.9.25, 2.0.22.20, 3.0.9.35
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.7.1845
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.9.35">
+                                        3.0.9.35
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                30.05.16
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.8.15, 3.0.9.11, 3.0.9.25, 2.0.22.20
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.7.1759
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.9.25">
+                                        3.0.9.25
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                07.04.16
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.20.12, 2.0.21.3, 3.0.8.15, 3.0.9.11
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.7.1759
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.8.15">
+                                        3.0.8.15
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                11.02.16
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.20.12, 3.0.7.20, 2.0.21.3
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.7.1759
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.7.20">
+                                        3.0.7.20
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                25.12.15
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.6.11, 3.0.6.12, 2.0.20.12
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.6.1977
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.6.12">
+                                        3.0.6.12
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                04.12.15
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.5.11, 2.0.19.7, 3.0.6.11
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.6.1977
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.5.11">
+                                        3.0.5.11
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                01.09.15
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.18.11, 3.0.4.7
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.5.1383
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.4.7">
+                                        3.0.4.7
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                22.06.15
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.18.11, 3.0.3.7
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.5.1383
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.3.7">
+                                        3.0.3.7
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                06.05.15
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    2.0.18.11, 3.0.2.7
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.5.1068
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.2.7">
+                                        3.0.2.7
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                16.03.15
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.1.4, 2.0.18.11
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.5.1068
+                                </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td class="versionColumn">
+                                
+                                <a href="/version_files?nick=AccountingKz30&ver=3.0.1.4">
+                                        3.0.1.4
+                                </a>
+                            </td>
+                            <td class="dateColumn">
+                                24.12.14
+                            </td>
+                            <td class="previousVersionsColumn">
+                                    3.0.1.3, 2.0.17.22
+                            </td>
+                            
+                                <td class="minVersionsColumn">
+                                        8.3.5.1068
+                                </td>
+                            
+                        </tr>
+                        
+                    </table>
+                    
+                </div>
+            
+
+            
+
+            
+                <div class="formLine">
+                    <a class="project-additional-info" href="http://v8.1c.ru/distrib/">Порядок распространения платформы и прикладных решений (конфигураций) системы программ 1С:Предприятие 8, разрабатываемых фирмой "1С"</a>
+                </div>
+            
+
+            
+                
+                    <a id="plan-release-link-3.0.63.1" href="#"></a>
+                    <div class="plan-release-info">
+                        <h5>
+                            Информация о планируемом релизе
+                        </h5>
+                        <table class="planTable">
+                            <tr>
+                                <td nowrap="nowarp">
+                                    Номер версии
+                                </td>
+                                <td class="version-name">
+                                        3.0.63.1
+                                </td>
+                            </tr>
+                            
+                                <tr>
+                                    <td nowrap="nowarp">
+                                        Ориентировочная дата выхода 
+                                    </td>
+                                    <td class="version-build-date">
+                                            23.01.25
+                                    </td>
+                                </tr>
+                            
+                            
+                                <tr>
+                                    <td nowrap="nowarp">
+                                        Дата обновления плановых данных
+                                    </td>
+                                    <td class="version-plan-info-update">
+                                        10.01.25
+                                    </td>
+                                </tr>
+                            
+                        </table>
+                        <div class="formLine">
+                                <span style="font-size: 12pt;">- Изменения в типовом и налоговом планах счетов: Добавление счета по ОПВР.</span></p><p style="font-size: 11pt;text-align: justify;white-space:normal;"><span style="font-size: 12pt;">- Реализация социальных отчислений по договорам ГПХ </span></p><p style="font-size: 11pt;text-align: justify;white-space:normal;"><span style="font-size: 12pt;">- Добавление утвержденной формы Заявления физического лица о применении налоговых вычетов по </span></p><p style="font-size: 11pt;text-align: justify;white-space:normal;"><span style="font-size: 12pt;">Приказу Министра финансов Республики Казахстан от 1 февраля 2018 года № 102</span></p><p style="font-size: 11pt;text-align: justify;white-space:normal;"><span style="font-size: 12pt;">- Развитие стандарта обмена по технологии </span><span style="font-size: 12pt;">DirectBank</span><span style="font-size: 12pt;"> </span><span style="font-size: 12pt;">для поддержки формата </span><span style="font-size: 12pt;">MX</span><span style="font-size: 12pt;"> </span><span style="font-size: 12pt;">в рамках перехода на </span><span style="font-size: 12pt;">ISO</span><span style="font-size: 12pt;"> 20022</span></p><p style="font-size: 11pt;text-align: justify;white-space:normal;"><span style="font-size: 12pt;">- Исправление ошибок и замечаний</span></p><p><br>
+                        </div>
+                        <div class="formLine">
+                            <span class="plan-project-additional-info">Информация о планируемом релизе является предварительной. В дальнейшем информация может уточняться и изменяться.</span>
+                        </div>
+                    </div>
+                
+            
+
+            
+                <div class="formLine">
+                    <h5>
+                        Версии для тестирования
+                    </h5>
+                    
+                        <p>
+                            
+                            
+                            17.01.25 опубликована версия  <a href='/version_files?nick=AccountingKz30&ver=3.0.62.2'>3.0.62.2</a>, предназначена для тестирования
+                        </p>
+                    
+                    <p>
+                        
+                            Предварительные тестовые релизы конфигураций предоставляются партнерам фирмы "1С" и пользователям                 системы программ                 1С:Предприятие для тестирования, предварительного ознакомления с новыми возможностями                 конфигураций, исправлениями ошибок,                 для апробации работы новых релизов на реальных данных.<br>                  Использование предварительного релиза для автоматизации реальных задач предприятия может                 выполняться только в отдельных случаях                 по решению пользователя, совместно с партнером, поддерживающим внедрение
+                        
+                        
+                    </p>
+                </div>
+            
+
+            
+        
+    
+</div>
+            </div>
+        </td>
+    </tr>
+    <tr class="footer-container">
+        <td>
+            <footer class="footer">
+                
+
+
+
+
+
+
+
+
+<div class="innerFooter">
+    <div class="footerInfo">
+        <span>
+            
+            
+                &copy; 1С-Софт, 2025. Все права защищены
+            
+        </span>
+    </div>
+</div>
+            </footer>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+
+    <script type="text/javascript"
+    src="/resources/resources/ga.js"></script>
+
+
