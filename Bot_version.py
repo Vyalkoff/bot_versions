@@ -44,6 +44,7 @@ async def get_path(message: types.Message):
     session = autn.authorization()
     if session:
         new_release = check_up.check_new_release(session)
+        session.close()
         await message.answer(new_release)
     else:
         await message.answer(f'Ошибка соедиения с сайтом, Обратится  к администратору')

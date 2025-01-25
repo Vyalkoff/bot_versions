@@ -7,21 +7,20 @@ import data_for_auth
 
 def check_new_release(session):
     address_html = requests_release_path.request_release(session)
-    if address_html:
-        versions_on_site = parser_updetes.parser_release()
-        last_version_site = search_version.last_version(versions_on_site)
-        data = write_read_html_json.read_out_json(data_for_auth.LOCAL_ADDRESS_RELEASE_JSON)
-        last_version_json = search_version.last_version(data)
-        if last_version_json != last_version_site:
-            recorded = write_read_html_json.write_for_json(data_for_auth.LOCAL_ADDRESS_RELEASE_JSON, versions_on_site)
-            if recorded:
-                return f"Вышел новый релиз {last_version_site}. Информация Обновлена"
-            else:
-                return f"Произошла ошибка. Обратится к администратору"
+
+    versions_on_site = parser_updetes.parser_release()
+    last_version_site = search_version.last_version(versions_on_site)
+    data = write_read_html_json.read_out_json(data_for_auth.LOCAL_ADDRESS_RELEASE_JSON)
+    last_version_json = search_version.last_version(data)
+    if last_version_json != last_version_site:
+        recorded = write_read_html_json.write_for_json(data_for_auth.LOCAL_ADDRESS_RELEASE_JSON, versions_on_site)
+        if recorded:
+            return f"Вышел новый релиз {last_version_site}. Информация Обновлена"
         else:
-            return f'Последняя версия {last_version_json}'
+            return f"Произошла ошибка. Обратится к администратору"
     else:
-        return f"Произошла ошибка. Обратится к администратору"
+        return f'Последняя версия {last_version_json}'
+
 
 
 # def check_new_path(session):
