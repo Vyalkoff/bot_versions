@@ -3,6 +3,18 @@ import search_version
 import parser_updetes
 import write_read_html_json
 import data_for_auth
+import autn
+
+
+def update_release():
+    session = autn.get_session()
+    response = requests_release_path.request(session, data_for_auth.ADDRESS_RELEASE)
+    versions_dict = parser_updetes.parser_release(session,response.text)
+    record = write_read_html_json.write_for_json(data_for_auth.LOCAL_ADDRESS_RELEASE_AND_LINK_JSON, versions_dict)
+    if record:
+        return "Информация о релизах обновлена"
+    else:
+        return "Возникла ошибка обратится к VLAD"
 
 
 def check_new_release(session):
@@ -20,7 +32,6 @@ def check_new_release(session):
             return f"Произошла ошибка. Обратится к администратору"
     else:
         return f'Последняя версия {last_version_json}'
-
 
 
 # def check_new_path(session):
@@ -57,6 +68,4 @@ def update_path(session):
 
 
 if __name__ == '__main__':
-    import autn
-
-    print(check_new_release(autn.authorization()))
+    update_release()

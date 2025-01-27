@@ -1,10 +1,14 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+
 import json
 
 import data_for_auth
 import write_read_html_json
-from requests_release_path import request_path, request_release
+from requests_release_path import request_path, request
 
-with open("data_release_json/release.json", encoding="utf-8") as file:
+with open("data_release_json/release_link.json", encoding="utf-8") as file:
     data = json.load(file)
 
 
@@ -14,7 +18,7 @@ def search_count_version(vers: str):
     for number in range(len_data):
         for key, value in data[str(number)].items():
             if vers in value['previousVersionsColumn']:
-                return key
+                return key, value['links_release']
 
 
 def last_version(vers: dict):
@@ -25,11 +29,11 @@ def last_version(vers: dict):
 def find_version(version):
     last_vers = last_version(data)
     counter = 0
-    all_version = []
+    all_version = {}
 
     while last_vers != version:
-        version = search_count_version(version)
-        all_version.append(version)
+        version, links = search_count_version(version)
+        all_version[version] = links
         counter += 1
     return counter, all_version
 
@@ -45,3 +49,14 @@ def find_path_for_last_release(session):
 
 def find_path_for_release(session, release):
     pass
+
+
+if __name__ == '__main__':
+    counter, all_version = find_version('3.0.50.1')
+    release = ""
+    for links in all_version:
+        # content = TextLink(links, url=all_version[links][0])
+        # release += content
+        release += release + f'<a href={all_version[links][0]}>{links}</a>'
+    text = f'С версии 3.0.50.1 До последней версии {counter}\n Релизы {release}'
+    print(text)

@@ -1,15 +1,17 @@
+import time
+
 import autn
 import data_for_auth
 import write_read_html_json
 
 
-def request_release(session, release=False):
-    response_updates = session.get(data_for_auth.ADDRESS_RELEASE)
-    recorded = write_read_html_json.write_for_html(data_for_auth.LOCAL_ADDRESS_RELEASE_HTML, response_updates)
-    if recorded:
-        return data_for_auth.LOCAL_ADDRESS_RELEASE_HTML
+def request(session, address):
+    response = session.get(address, timeout=5)
+    if response.status_code == 200:
+        return response
     else:
         return False
+    # recorded = write_read_html_json.write_for_html(data_for_auth.LOCAL_ADDRESS_RELEASE_HTML, response_updates)
 
 
 def request_path(session, release):
@@ -30,5 +32,3 @@ if __name__ == '__main__':
     #     print("файл html получен")
     # else:
     #     print("Произошла Ошибка")
-
-

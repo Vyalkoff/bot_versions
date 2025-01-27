@@ -1,7 +1,11 @@
-import json
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import autn
+import requests_release_path
 import write_read_html_json
 from bs4 import BeautifulSoup
 import data_for_auth
+import time
 
 
 # def create_dict(**qwargs):
@@ -12,14 +16,13 @@ import data_for_auth
 # table = soup.find('table', {'id': "versionsTable"}).find('tbody').find_all('tr')
 
 
-def find_versions(soup):
+def find_versions(session,soup):
     number = 0
     data = {}
-    # if number ==1:
-    #     find_all_in_table = soup.find('table', {'id': "versionsTable"}).find('tbody').find_all('tr')[0]
-    # else:
-    find_all_in_table = soup.find('table', {'id': "versionsTable"}).find('tbody').find_all('tr')
 
+    find_all_in_table = soup.find('table', {'id': "versionsTable"}).find('tbody').find_all('tr')
+    formatted_time = time.ctime(time.time())
+    print(f"Начало сбора ниформации {formatted_time}")
     for tag in find_all_in_table:
         previous_versions_column = []
         version_column = tag.find('td', {'class': 'versionColumn'}).text.strip()
@@ -30,11 +33,20 @@ def find_versions(soup):
             previous_versions_column.append(version_no_comma)
 
         min_versions_column = tag.find('td', {'class': 'previousVersionsColumn'}).text.strip()
+        # Получить ссылки релиза
+        response = requests_release_path.request(session,data_for_auth.format_link_download(version_column))
+        data_list_download = parser_link_download(response)
+
         data[number] = {version_column: {
             "dateColumn": date_column,
             'previousVersionsColumn': previous_versions_column,
-            'minVersionsColumn': min_versions_column
+            'minVersionsColumn': min_versions_column,
+            'links_release': data_list_download
         }}
+        formatted_time = time.ctime(time.time())
+        print(f"информация о релизе {version_column} собрана время {formatted_time}")
+        if version_column == "3.0.40.2":
+            break
         number += 1
     return data
 
@@ -63,7 +75,21 @@ def find_path(soup):
         number += 1
     return data
 
- 
+
+def find_link(soup: BeautifulSoup):
+    number = 0
+    data_list = []
+    find_all_in_table = soup.find('div', {'class': "downloadDist"}).find_all('a')
+
+    for tag in find_all_in_table:
+        download_link_release = tag['href']
+
+        data_list.append(download_link_release)
+
+        number += 1
+    return data_list
+
+
 def parser_path(address):
     html = write_read_html_json.read_out_html(address)
     soup = BeautifulSoup(html, 'lxml')
@@ -71,14 +97,30 @@ def parser_path(address):
     return data
 
 
-def parser_release():
-    src = write_read_html_json.read_out_html(data_for_auth.LOCAL_ADDRESS_RELEASE_HTML)
-    soup = BeautifulSoup(src, 'lxml')
-    data = find_versions(soup)
+def parser_release(session, response_html):
+    # src = write_read_html_json.read_out_html(data_for_auth.LOCAL_ADDRESS_RELEASE_HTML)
+    soup = BeautifulSoup(response_html, 'lxml')
+    data = find_versions(session, soup)
     return data
 
 
-if __name__ == '__main__':
-    import data_for_auth
+def parser_link_download(response_html):
+    soup = BeautifulSoup(response_html.text, 'lxml')
+    data_list = find_link(soup)
+    return data_list
 
-    print(parser_path(data_for_auth.LOCAL_ADDRESS_PATH_HTML))
+
+def parser_hidden_auth(response_html):
+    soup = BeautifulSoup(response_html.text, 'lxml')
+    hidden_inputs = soup.find_all("input", type="hidden")
+    data = {}
+    for input_tag in hidden_inputs:
+        data[input_tag.get("name")] = input_tag.get("value")
+
+
+if __name__ == '__main__':
+    # import data_for_auth
+    current_time = time.time()
+    formatted_time = time.ctime(current_time)
+    print(formatted_time)
+    # print(parser_path(data_for_auth.LOCAL_ADDRESS_PATH_HTML))
