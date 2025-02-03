@@ -16,12 +16,9 @@ def request(session, address):
 
 def request_path(session, release):
     address_path = data_for_auth.ADDRESS_PATH + release
-
     response_updates = session.get(address_path)
-
-    recorded = write_read_html_json.write_for_html(data_for_auth.LOCAL_ADDRESS_PATH_HTML, response_updates)
-    if recorded:
-        return data_for_auth.LOCAL_ADDRESS_PATH_HTML
+    if response_updates.status_code == 200:
+        return response_updates
     else:
         return False
 

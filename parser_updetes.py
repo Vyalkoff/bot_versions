@@ -16,7 +16,7 @@ import time
 # table = soup.find('table', {'id': "versionsTable"}).find('tbody').find_all('tr')
 
 
-def find_versions(session,soup):
+def find_versions(session, soup, all_release):
     number = 0
     data = {}
 
@@ -34,7 +34,7 @@ def find_versions(session,soup):
 
         min_versions_column = tag.find('td', {'class': 'previousVersionsColumn'}).text.strip()
         # Получить ссылки релиза
-        response = requests_release_path.request(session,data_for_auth.format_link_download(version_column))
+        response = requests_release_path.request(session, data_for_auth.format_link_download(version_column))
         data_list_download = parser_link_download(response)
 
         data[number] = {version_column: {
@@ -44,10 +44,14 @@ def find_versions(session,soup):
             'links_release': data_list_download
         }}
         formatted_time = time.ctime(time.time())
+
         print(f"информация о релизе {version_column} собрана время {formatted_time}")
-        if version_column == "3.0.40.2":
+        if not all_release:
+            break
+        if number == 32:
             break
         number += 1
+
     return data
 
 
@@ -90,17 +94,16 @@ def find_link(soup: BeautifulSoup):
     return data_list
 
 
-def parser_path(address):
-    html = write_read_html_json.read_out_html(address)
-    soup = BeautifulSoup(html, 'lxml')
+def parser_path(response_html):
+    soup = BeautifulSoup(response_html, 'lxml')
     data = find_path(soup)
     return data
 
 
-def parser_release(session, response_html):
+def parser_release(session, response_html, all_release):
     # src = write_read_html_json.read_out_html(data_for_auth.LOCAL_ADDRESS_RELEASE_HTML)
     soup = BeautifulSoup(response_html, 'lxml')
-    data = find_versions(session, soup)
+    data = find_versions(session, soup, all_release)
     return data
 
 
@@ -116,6 +119,7 @@ def parser_hidden_auth(response_html):
     data = {}
     for input_tag in hidden_inputs:
         data[input_tag.get("name")] = input_tag.get("value")
+    return data
 
 
 if __name__ == '__main__':

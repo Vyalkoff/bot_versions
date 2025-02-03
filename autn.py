@@ -34,7 +34,6 @@ def authorization():
 
 def get_session():
     with requests.Session() as session:
-        # result = write_read_html_json.read_out_json('cookies.json')
         coke = write_read_html_json.read_out_json('cocke.json')
         for i in coke:
             session.cookies.set(**i)
@@ -46,7 +45,7 @@ def get_session():
 
 
 if __name__ == '__main__':
-    #authorization()
+    authorization()
     session = get_session()
     response = session.get(data_for_auth.ADDRESS_RELEASE)
     print(response.text)
